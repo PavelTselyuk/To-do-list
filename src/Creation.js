@@ -11,7 +11,7 @@ class Creation extends Component {
                 <form>
                     <input id="elemName" type="text" size="60" value={this.state.value}
                         onKeyDown={(event) => this.inputKeyDown(event)} onChange={(event) => this.changeInputValue(event)} />
-                    <button id="create" onClick={(event) => this.clickButtonCreate(event)} type="button">Создать</button>
+                    <button id="create" onClick={() => this.clickButtonCreate(this.props)} type="button">Создать</button>
                 </form>
             </div>
         )
@@ -20,19 +20,18 @@ class Creation extends Component {
     inputKeyDown(event) {
         if (event.keyCode == 13) {
             event.preventDefault();
-            this.clickButtonCreate(event);
-            this.setState({ value: "" });
-            return;
+            this.clickButtonCreate(this.props);
         }
+        return;
     }
 
     changeInputValue(event) {
         this.setState({ value: event.value });
     }
 
-    clickButtonCreate(event) {
+    clickButtonCreate(props) {
         let localStorageObj = JSON.parse(localStorage.getItem('LocalStorageNotes'));
-        let value = event.target.previousElementSibling.value;
+        let value = document.getElementById('elemName').value;
         let id = 0;
         while (true) {
             if (id in localStorageObj) {
@@ -48,7 +47,7 @@ class Creation extends Component {
         }
 
         localStorage.setItem('LocalStorageNotes', JSON.stringify(localStorageObj));
-        this.props.reRenderList();
+        props.reRenderList();
         this.setState({ value: "" });
     }
 }
