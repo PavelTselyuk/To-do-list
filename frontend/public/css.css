@@ -1,0 +1,23 @@
+body {
+    padding: 20px 0 0 20px;
+  }
+
+li {
+  list-style-type: none;
+ }
+
+.delete{
+  position: absolute;
+  top:0;
+  bottom:0;
+  right: 0;
+  display: table;
+}
+
+.btn{
+  display: table-cell;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+}
