@@ -1,3 +1,7 @@
 backend/node_modules
 
+<<<<<<< HEAD
 fontend/node_modules
+=======
+fontend/node_modules
+>>>>>>> f7ba063ae0db3ce4905c6d8e1efc4087d1b08923
