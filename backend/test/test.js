@@ -37,10 +37,3 @@ describe('App test', function () {
             });
     });
 });
-
-
-
-// let item = new Todo({
-//     name: 'smth'
-// });
-// item.save();
