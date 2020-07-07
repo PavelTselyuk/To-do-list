@@ -1,0 +1,17 @@
+li {
+  list-style-type: none;
+ }
+
+.elem::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.btn{
+  display: table-cell;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+}

@@ -1,0 +1,43 @@
+DELETE http://localhost:5000/todos/5ec703b033c0351f34575885/delete HTTP/1.1
+
+###
+
+GET http://localhost:5000/todos HTTP/1.1
+
+###
+
+GET http://localhost:5000/todos/5ecec164059e591388f775f5 HTTP/1.1
+
+###
+
+POST http://localhost:5000/todos HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Alishev",
+    "marks": [7, 3, 5, 7, 4, 5]
+}
+
+###
+POST  http://localhost:5000/users/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "login": "cherry_blossomq",
+    "password": "123451"
+}
+
+###
+POST  http://localhost:5000/users/signin HTTP/1.1
+Content-Type: application/json
+
+{
+    "login": "user",
+    "password": "user1234"
+}
+
+###
+GET   http://localhost:5000/users/secret HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0b2RvVXNlciIsInN1YiI6IjVmMDM5NWJlMTA4YTgxMjRhMDI0ZTg2YiIsImlhdCI6MTU5NDA4MzIwMzUxNCwiZXhwIjoxNTk0MTY5NjAzNTE0fQ.NcFpV6u-6yiEA-rXoUSw87UFy3MV0eUk_vYRs-QxP_w
+
+
