@@ -19,7 +19,7 @@ class Header extends Component {
    render() {
       return (
          <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{ marginBottom: '30px' }}>
-            <Link className="navbar-brand" to="/">Code API Auth</Link>
+            <Link className="navbar-brand" to="/">ToDoApp</Link>
 
 
             <div className="collapse navbar-collapse">
