@@ -41,9 +41,7 @@ module.exports = {
 
     secret: async (req, res) => {
         let login = req.user.login;
-        console.log('req.body is RIGHT HERE', req.user);
         let todos = await Todo.find({ login: login });
-        console.log(todos);
         res.json({ secret: todos });
     }
 } 
